@@ -15,3 +15,4 @@ For more help:
 ```
 outside -h
 ```
+Make sure Node.js and npm is installed in your system in order to use it.
