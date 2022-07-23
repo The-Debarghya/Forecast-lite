@@ -20,12 +20,12 @@ outside -h
 * Build from Dockerfile:
 ```
 docker build -t forecast-lite:latest .
-docker run forecast-lite:latest
+docker exec -d forecast-lite:latest sh -c "outside [ARGS...]"
 ```
 
 ### OR:
 * Pull the already made image from dockerhub:
 ```
 docker pull heisenberg8622/forecast-lite:latest
-docker run heisenberg8622/forecast-lite:latest
+docker exec -d heisenberg8622/forecast-lite:latest sh -c "outside [ARGS...]"
 ```
