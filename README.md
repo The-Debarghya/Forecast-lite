@@ -15,17 +15,26 @@ outside forecast --location yourlocation
 ```
 outside -h
 ```
+* Help options:
+```
+Usage:
+  outside [command] <options>
+
+  today----->show today's weather
+  version--->show version of this package
+  help------>show the detailed usage options
+```
+
 ## Build with Docker
 
 * Build from Dockerfile:
 ```
 docker build -t forecast-lite:latest .
-docker exec -d forecast-lite:latest sh -c "outside [ARGS...]"
+docker run --rm -d --name forecast-lite:latest outside [ARGS...]
 ```
 
 ### OR:
 * Pull the already made image from dockerhub:
 ```
-docker pull heisenberg8622/forecast-lite:latest
-docker exec -d heisenberg8622/forecast-lite:latest sh -c "outside [ARGS...]"
+docker run --rm -d --name heisenberg8622/forecast-lite:latest outside [ARGS...]
 ```
